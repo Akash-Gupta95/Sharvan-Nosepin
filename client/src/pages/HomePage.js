@@ -204,7 +204,7 @@ const HomePage = () => {
               >
                 <div className="CardIMage">
                   <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                    src={`https://sharvannosepin.onrender.com/api/v1/product/product-photo/${p._id}`}
                     alt={p.name}
                   />
                 </div>
