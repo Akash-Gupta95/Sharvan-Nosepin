@@ -33,8 +33,7 @@ const HomePage = () => {
         setCategories(data?.category);
       }
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Categaory not found");
+      console.log(error, "getAllCategory Faild");
     }
   };
 
