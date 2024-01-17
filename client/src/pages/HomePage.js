@@ -6,7 +6,7 @@ import { useCart } from "../context/cart";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
-
+// import <AiOutlineReload> from 'react-icon-ai';
 import "../styles/Homepage.css";
 import { useAuth } from "../context/auth";
 import "./pageStyle/HomePage.css";
@@ -223,14 +223,11 @@ const HomePage = () => {
                   setPage(page + 1);
                 }}
               >
-                {/* {loading ? (
+                {loading ? (
                   "Loading ..."
                 ) : (
-                  <>
-                    {" "}
-                    Loadmore <AiOutlineReload />
-                  </>
-                )} */}
+                  <> {/* Loadmore <AiOutlineReload /> */}</>
+                )}
               </button>
             )}
           </div>
