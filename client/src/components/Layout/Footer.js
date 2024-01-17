@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="mb-4" />
-        <div className="row align-item-center">
+        <div className="row align-item-center copyright">
           <div className="col-md-7 col-lg-8">
             <p>
               Copyright All rights reserved by:
