@@ -11,7 +11,9 @@ const AdminUserOrder = () => {
   //get all Orders
   const AllOrder = async () => {
     try {
-      const { data } = await axios.get("/api/v1/order/get-orderDetails");
+      const { data } = await axios.get(
+        "https://sharvannosepin.onrender.com/api/v1/order/get-orderDetails"
+      );
       if (data?.success) {
         setUserData(data?.orders);
       }
@@ -32,7 +34,7 @@ const AdminUserOrder = () => {
 
     if (window.confirm("Press a button!") === true) {
       const deleteOrder = await axios.delete(
-        `/api/v1/order/delete-product/${id}`
+        `https://sharvannosepin.onrender.com/api/v1/order/delete-product/${id}`
       );
       toast.message(deleteOrder);
     } else {
