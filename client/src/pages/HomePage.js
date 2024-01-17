@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Checkbox, Radio } from "antd";
-import { Prices } from "../components/Prices";
+// import { Checkbox, Radio } from "antd";
+// import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
-// import <AiOutlineReload> from 'react-icon-ai';
+
+import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 import { useAuth } from "../context/auth";
 import "./pageStyle/HomePage.css";
@@ -226,7 +227,10 @@ const HomePage = () => {
                 {loading ? (
                   "Loading ..."
                 ) : (
-                  <> {/* Loadmore <AiOutlineReload /> */}</>
+                  <>
+                    {" "}
+                    Loadmore <AiOutlineReload />{" "}
+                  </>
                 )}
               </button>
             )}
