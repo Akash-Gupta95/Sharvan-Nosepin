@@ -11,6 +11,8 @@ import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 import { useAuth } from "../context/auth";
 import "./pageStyle/HomePage.css";
+import HeroSection from "./Hero-Section";
+import OrderButton from "./OrderButton";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -146,55 +148,30 @@ const HomePage = () => {
 
   return (
     <Layout title={"Shravan-Nosepin "}>
-      {/* banner image */}
-      {/* <img
-        src="/images/banner.png"
-        className="banner-img"
-        alt="bannerimage"
-        width={"100%"}
-      /> */}
-      {/* banner image */}
 
-      {/* Filter Category is Disable for Not in use right Now
-        <div className="col-md-3 filters">
-          <h4 className="text-center">Filter By Category</h4>
-          <div className="d-flex flex-column">
-            {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
-            ))}
+      <HeroSection></HeroSection>
+
+      <OrderButton></OrderButton>
+      
+      <div className="container serviceContainer">
+        <div className="row">
+          <div className="col-12">
+          <h1 className="Services text-center">Our <span>Services </span></h1>
+
           </div>
-         
-          <h4 className="text-center mt-4">Filter By Price</h4>
-          <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-              {Prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
-                </div>
-              ))}
-            </Radio.Group>
-            </div>
-            <div className="d-flex flex-column">
-            <button
-              className="btn btn-danger"
-              onClick={() => window.location.reload()}
-            >
-              RESET FILTERS
-            </button>
-          </div>
-          </div>
-          
-        */}
-      <div className="container-fluid row mt-3 home-page">
+        </div>
+      </div>
+
+      <div className="container-fluid row  home-page product-Container">
         <div className="row card-row">
-          <h1 className="text-center">All Products</h1>
+
 
           {products?.map((p) => (
+             <>
+            <div  className="col-lg-4 col-md-4">
+
+
+
             <div className="card" key={p._id}>
               <div
                 className="navigate"
@@ -227,6 +204,8 @@ const HomePage = () => {
                 </button>
               )}
             </div>
+            </div>
+           </>
           ))}
 
           <div className="m-2 p-3">

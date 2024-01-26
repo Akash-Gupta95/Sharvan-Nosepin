@@ -2,14 +2,39 @@
   margin-top: 60px;
 }
 
+.product-Container{
+  margin-top: 10% !important;
+}
+
 .home-page h1 {
   color: gray;
   font-family: "Playfair Display", serif;
 }
 
 .home-page {
+  
   display: flex;
   flex-wrap: wrap;
+  background-image: url('../../public/images/01\ dark\ gold\ luxurious\ background.jpg');
+  width: 104%;
+}
+
+.Services span{
+  color: red;
+  position: relative;
+    padding: 0;
+    color: #f91942;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+.Services span::before, *::after {
+  box-sizing: border-box;
 }
 
 /* Card =========================================== */
@@ -18,10 +43,12 @@
 .home-page .card {
 
   width: 100%;
-
   margin-bottom: 50px;
   border-radius: 25px;
- margin-left: 20px;
+  margin-left: 20px;
+  margin-top: 15%;
+
+
 }
 
 

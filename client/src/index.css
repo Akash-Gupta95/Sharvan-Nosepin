@@ -9,12 +9,10 @@
 
 
 body{
-background-image: url('../public/images/01\ dark\ gold\ luxurious\ background.jpg');
+
 background-size: cover;
 background-position: center;
 }
-/* font-family: 'Poppins', sans-serif; */
-/* font-family: 'Playfair Display', serif; */
 
 /* //navbar css */
 .navbar {
@@ -37,7 +35,7 @@ ul li{
   margin-top: 5px;
   font-weight: 500;
   font-size: 1.2rem;
-  background-image: url('../public/images/NavBG.jpg');
+
   background-size: cover;
   background-position: center;
 }
