@@ -19,9 +19,16 @@ background-position: center;
   font-family: "Poppins", sans-serif;
   font-size: 17px;
   text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
+
+  background-color: rgba(0, 0, 0,0.9);
+  /* box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
-  border-bottom: solid gray !important;
+  border-bottom: solid gray !important; */
+
+  border-radius: 5px;
+}
+.navbar::-webkit-scrollbar{
+  background-color: red;
 }
 
 
@@ -58,6 +65,21 @@ ul li{
 
 }
 
+.navbar-brand .brandImage {
+  display: flex;
+  width: 8rem;
+  height:2rem;
+  justify-content: center;
+  text-align: center;
+  position:relative;
+  bottom: 1.3rem;
+
+}
+
+.navbar-brand .brandImage img{
+  width: 5rem;
+  height: 5rem;
+}
 button{
   margin-right: 5px;
 }
@@ -171,4 +193,11 @@ button{
   background-color: #434343 !important;
   color: white;
   padding: 20px 0px;
+}
+
+
+@media(max-width:660px){
+.navbar-brand .brandImage {
+  right: 1rem;
+}
 }

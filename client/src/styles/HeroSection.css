@@ -18,8 +18,23 @@
 .collections{
 
     margin-top: 30%;
+    z-index: 5;
 
 }
+
+.Hero .collections::before{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1
+    );
+    z-index: 1;
+}
+
+
 
 .collections h1{
     font-size: 3.3rem;
@@ -27,6 +42,7 @@
     letter-spacing: 2px;
     line-height: 3.3rem;  
      color: white;
+     z-index: 5;
 }
 
 .collections .Brand{
@@ -36,9 +52,10 @@
 @media(max-width:660px){
     .collections{
 
-        margin-top: 120%;
-
-    
+        margin-top: 140%;
+        z-index: 3;
+        color: white;
+ 
     
     }
 
@@ -50,7 +67,6 @@
         background-size: cover;
         width: 100%;
         height: 100vh;
-       
         overflow: hidden;
     }
 }

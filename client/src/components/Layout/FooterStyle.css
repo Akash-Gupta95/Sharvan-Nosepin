@@ -3,10 +3,17 @@
 
 a{
     text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    
 }
 
 footer{
     
+}
+
+strong{
+  display: block;
 }
 
 .copyright div p{
