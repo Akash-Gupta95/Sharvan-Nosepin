@@ -7,6 +7,8 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 
+import BrandImg from "../Layout/BrandLogo.png";
+
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
@@ -22,9 +24,11 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-sm  navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-expand-sm  navbar-dark  fixed-top">
         <Link to="/" className="navbar-brand text-white">
-          <span className="text-warning"> Sharven-</span>Nospin
+          <div className="brandImage">
+          <img src={BrandImg} alt="" />
+          </div>
         </Link>
         <a className="navbar-brand" href="#">
           <img src="" alt="" />
@@ -49,6 +53,7 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
+
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
@@ -123,13 +128,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  <li className="nav-item">
-                    <NavLink to="/cart" className="nav-link">
-                      <Badge count={cart?.length} showZero offset={[10, -5]}>
-                        Cart
-                      </Badge>
-                    </NavLink>
-                  </li>
+                
                 </>
               )}
             </ul>

@@ -16,58 +16,57 @@ const Footer = () => {
               styles."
             </p>
           </div>
-          <div className="col-md2 col-lg-2 col-xl-2 mx-auto mt-1">
+          <div className="col-md2 col-lg-2 col-xl-2 mx-auto mt-3 col-6">
             <h5 className="text-uppercase mb-2 front-weight-bold text-warning">
               Products
             </h5>
             <a href="#" className="text-white">
-              Cretavity
+              Nose Ring
             </a>
             <a href="#" className="text-white">
-              The provider
+              Ear Rings
             </a>
+
+            <a href="#" className="text-white">
+              Nosepin
+            </a>
+            
           </div>
 
-          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 className="text-uppercase mb-2 front-weight-bold text-warning">
-              UseFul Links
-            </h5>
-            <a href="#" className="text-white">
-              Your account
-            </a>
-            <a href="#" className="text-white">
-              Shipping
-            </a>
-            <a href="#" className="text-white">
-              Help
-            </a>
-          </div>
 
-          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 col-6">
             <h5 className="text-uppercase mb-4 front-weight-bold text-warning">
               Contact
             </h5>
-            <p>
-              <i className="fas fa-home mr-3"></i>Darbhanga
-            </p>
-            <p>
-              <i className="fas fa-home mr-3"></i>akashkashyapy@gmail.com
-            </p>
-            <p>
-              <i className="fas fa-home mr-3"></i>+91 8434381886
-            </p>
+            <a href="#" className="text-white">
+              Darbhanga
+            </a>
+         
+          
+
+            <a href="#" className="text-white">
+            91+ 8434381886
+            91+ 8434381886
+            </a>
+            
+            
             <p>
               <i className="fas fa-home mr-3"></i>
             </p>
           </div>
         </div>
         <hr className="mb-4" />
+        <div className="col-12">  
+        <a href="#" className="text-white">
+            akashkashyapy@gmail.com
+            </a></div>
+        <hr className="mb-4" />
         <div className="row align-item-center copyright">
           <div className="col-md-7 col-lg-8">
             <p>
               Copyright All rights reserved by:
               <a href="">
-                <strong className="text-warning">Akash Gupta</strong>
+                <strong className="text-warning ">Akash Gupta</strong>
               </a>
             </p>
           </div>

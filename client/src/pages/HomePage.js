@@ -151,13 +151,20 @@ const HomePage = () => {
 
       <HeroSection></HeroSection>
 
+      <div className="conatiner Slot">
+        <div className="row">
+          <h1 className="text-center">Our Collections Meet</h1>
+          <span className="text-center">Your Desires</span>
+        </div>
+      </div>
+
       <OrderButton></OrderButton>
       
-      <div className="container serviceContainer">
+      <div className="container serviceContainer ">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 border">
           <h1 className="Services text-center">Our <span>Services </span></h1>
-
+        
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@
   
   display: flex;
   flex-wrap: wrap;
-  background-image: url('../../public/images/01\ dark\ gold\ luxurious\ background.jpg');
+
   width: 104%;
 }
 
@@ -35,6 +35,15 @@
 
 .Services span::before, *::after {
   box-sizing: border-box;
+}
+
+.serviceContainer .Services span{
+
+  border-bottom: 3px solid red;
+  margin-top: 5px;
+  margin-bottom: 5px;
+ 
+
 }
 
 /* Card =========================================== */
@@ -171,7 +180,27 @@ filters
   font-weight: bold;
   font-size: 20px !important;
 }
+.Slot{
+  margin-top: 8rem;
+}
 
+.Slot h1 {
+ 
+  color: #0b3052;
+  font-size: 35px;
+  
+    font-weight: 700;
+    line-height: 1.2;
+}
+.Slot span{
+  color: #0b3052;
+  display: block;
+  font-weight: 700;
+  font-size: 28px;  
+
+  
+
+}
 
 @media(max-width:480px){
 
