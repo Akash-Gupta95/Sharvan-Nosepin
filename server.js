@@ -8,6 +8,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import orderRoutes from "./routes/orderRoutes.js";
+import compression from "compression";
 
 //configure env
 dotenv.config();
@@ -22,6 +23,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(compression());
 
 //routes
 app.use("/api/v1/auth", authRoutes);
