@@ -37,7 +37,7 @@ const OrderButton = () => {
 
   return (
     <div className="container">
-        <div className="row">
+      
           <div className="col-12 text-center mt-5 orderButton">
 
 
@@ -56,7 +56,7 @@ const OrderButton = () => {
               )}
      
           </div>
-        </div>
+      
     </div>
   )
 }

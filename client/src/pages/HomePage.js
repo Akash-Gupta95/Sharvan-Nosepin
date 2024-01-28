@@ -152,27 +152,26 @@ const HomePage = () => {
       <HeroSection></HeroSection>
 
       <div className="conatiner Slot">
-        <div className="row">
-          <h1 className="text-center">Our Collections Meet</h1>
-          <span className="text-center">Your Desires</span>
-        </div>
+
+        <h1 className="text-center">Our Collections Meet</h1>
+        <span className="text-center">Your Desires</span>
+
       </div>
 
       <OrderButton></OrderButton>
-      
+
       <div className="container serviceContainer ">
-        <div className="row">
-          <div className="col-12 border">
+
+        <div className="col-12 serviceHeader ">
           <h1 className="Services text-center">Our <span>Services </span></h1>
-        
-          </div>
+
         </div>
+
       </div>
 
       <div className="container-fluid row  home-page product-Container">
         <div className="row card-row">
-
-
+  
           {products?.map((p) => (
              <>
             <div  className="col-lg-4 col-md-4">
@@ -214,6 +213,7 @@ const HomePage = () => {
             </div>
            </>
           ))}
+         
 
           <div className="m-2 p-3">
             {products && products.length < total && (
@@ -235,6 +235,7 @@ const HomePage = () => {
               </button>
             )}
           </div>
+       
         </div>
       </div>
     </Layout>
