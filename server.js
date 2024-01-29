@@ -9,6 +9,7 @@ import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import orderRoutes from "./routes/orderRoutes.js";
 import compression from "compression";
+import ProductItemRoutes from "./routes/ProductItemRoutes.js"
 
 //configure env
 dotenv.config();
@@ -34,6 +35,9 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/order", orderRoutes);
+
+app.use("/api/v1/productItem", ProductItemRoutes);
+
 
 //rest api
 app.get("/", (req, res) => {
