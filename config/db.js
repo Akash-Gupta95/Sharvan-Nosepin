@@ -40,8 +40,8 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-     
-    }, mongoose.set('strictQuery', true));
+      
+    });
 
     console.log(`Connected To MongoDB Database ${conn.connection.host}`.bgMagenta.white);
 
