@@ -44,11 +44,10 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to ecommerce app</h1>");
 });
 
-//PORT
-const PORT = 8080;
+
 
 //run listen
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(
     `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
       .white

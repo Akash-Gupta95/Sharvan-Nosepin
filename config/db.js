@@ -35,12 +35,9 @@
 import mongoose from "mongoose";
 import colors from "colors";
 
-const MONGO_URL =
-  "mongodb+srv://akashkashyapy:ak%401611xx@ecommerce.cotdcu3.mongodb.net/ecommerce";
-
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(MONGO_URL, {
+    const conn = await mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
