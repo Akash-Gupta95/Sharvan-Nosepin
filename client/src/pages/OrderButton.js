@@ -14,6 +14,7 @@ const OrderButton = () => {
       // HandleOrder
 
   const handleOrder = async () => {
+    
     setOrder("Booked")
     const { name, email, phone, address } = auth.user;
     const data = {
@@ -37,7 +38,7 @@ const OrderButton = () => {
 
   return (
     <div className="container">
-        <div className="row">
+      
           <div className="col-12 text-center mt-5 orderButton">
 
 
@@ -56,7 +57,7 @@ const OrderButton = () => {
               )}
      
           </div>
-        </div>
+      
     </div>
   )
 }
