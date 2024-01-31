@@ -77,7 +77,7 @@ const ForgotPasssword = () => {
                 onChange={(e) => setNewPassword(e.target.value)}
                 className="form-control"
                 id="exampleInputPassword1"
-                placeholder="Enter Your Password"
+                placeholder="Enter New Password"
                 required
               />
             </div>
