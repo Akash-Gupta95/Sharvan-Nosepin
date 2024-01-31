@@ -83,7 +83,6 @@ const AdminUserOrder = () => {
                           <td> { c.createdAt}</td>
                           <td>
 
-
                           {/* <td> {c.createdAt.toString()}</td> */}
 
                             <button
