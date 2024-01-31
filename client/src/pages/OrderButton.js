@@ -23,11 +23,10 @@ const OrderButton = () => {
       phone,
       address,
     };
-    try {
-      const order = await axios.post(
+    try{
+    const order = await axios.post(
         "https://sharvannosepin.onrender.com/api/v1/order/create-order",
-        data
-      );
+        data);
       toast.success("Order Placed");
       
     

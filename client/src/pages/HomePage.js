@@ -7,12 +7,19 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 
+
+import Carousel from "./Carousel.js"
+
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 import { useAuth } from "../context/auth";
 import "./pageStyle/HomePage.css";
 import HeroSection from "./Hero-Section";
 import OrderButton from "./OrderButton";
+
+import Banner1 from "./Banner1.png";
+import Banner2 from "./Banner_3.png";
+import Banner3 from "./Banner2.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -149,71 +156,86 @@ const HomePage = () => {
   return (
     <Layout title={"Shravan-Nosepin "}>
 
-      <HeroSection></HeroSection>
+      {/* <HeroSection></HeroSection> */}
 
-      <div className="conatiner Slot">
+      {/* Cursole */}
+      <Carousel></Carousel>
 
-        <h1 className="text-center">Our Collections Meet</h1>
-        <span className="text-center">Your Desires</span>
 
+      
+      <div className="container TunchOrder">
+        <div className="container Tunch-Container">
+          <div className="row text-center text-warning mt-5 Tunch">
+            <div className="col-6 "><h1 >55 T</h1></div>
+            <div className="col-6 "><h1 >65 T</h1></div>
+          </div>
+        </div>
+        <OrderButton></OrderButton>
       </div>
 
-      <OrderButton></OrderButton>
+
+
+     
+
+
+
+    {/* Change Text */}
+      <div className="content  text-center">
+        <h1 className="changecontent1"></h1>
+      </div>
+
 
       <div className="container serviceContainer ">
-
         <div className="col-12 serviceHeader ">
           <h1 className="Services text-center">Our <span>Services </span></h1>
-
         </div>
-
       </div>
 
       <div className="container-fluid row  home-page product-Container">
         <div className="row card-row">
-  
+
           {products?.map((p) => (
-             <>
-            <div  className="col-lg-4 col-md-4">
+            <>
+              <div className="col-lg-4 col-md-4">
 
 
 
-            <div className="card" key={p._id}>
-              <div
-                className="navigate"
-                onClick={(e) => {
-                  navigate(`/product/${p.slug}`);
-                }}
-              >
-                <div className="CardIMage">
-                  <img
-                    src={`https://sharvannosepin.onrender.com/api/v1/product/product-photo/${p._id}`}
-                    alt={p.name}
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="card-name-price">
-                    <h5 className="card-title cardTitle-name">{p.name}</h5>
+                <div className="card" key={p._id}>
+                  <div
+                    className="navigate"
+                    onClick={(e) => {
+                      navigate(`/product/${p.slug}`);
+                    }}
+                  >
+                    <div className="CardIMage">
+                      <img
+                        src={`https://sharvannosepin.onrender.com/api/v1/product/product-photo/${p._id}`}
+                        alt={p.name}
+                      />
+                    </div>
+                    <div className="card-body">
+                      <div className="card-name-price">
+                        <h5 className="card-title cardTitle-name">{p.name}</h5>
+                      </div>
+                    </div>
                   </div>
+                  {!auth?.user ? (
+                    <button
+                      className="btn btn-dark ms-1"
+                      onClick={() => navigate("/login")}
+                    >
+                      PLACE ORDER
+                    </button>
+                  ) : (
+                    <button className="btn btn-dark ms-1" onClick={handleOrder}>
+                      PLACE ORDER
+                    </button>
+                  )}
                 </div>
               </div>
-              {!auth?.user ? (
-                <button
-                  className="btn btn-dark ms-1"
-                  onClick={() => navigate("/login")}
-                >
-                  PLACE ORDER
-                </button>
-              ) : (
-                <button className="btn btn-dark ms-1" onClick={handleOrder}>
-                  PLACE ORDER
-                </button>
-              )}
-            </div>
-            </div>
-           </>
+            </>
           ))}
-         
+
 
           <div className="m-2 p-3">
             {products && products.length < total && (
@@ -235,7 +257,7 @@ const HomePage = () => {
               </button>
             )}
           </div>
-       
+
         </div>
       </div>
     </Layout>

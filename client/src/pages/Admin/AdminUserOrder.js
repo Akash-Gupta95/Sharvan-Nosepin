@@ -41,6 +41,12 @@ const AdminUserOrder = () => {
     }
   };
 
+  const HandleTime = ({props})=>{
+
+
+    return ;
+  }
+
   return (
     <Layout title={"Dashboard - All Orders"}>
       <div className="container-fluid m-3 p-3">
@@ -60,6 +66,8 @@ const AdminUserOrder = () => {
                       <th scope="col">Email</th>
                       <th scope="col">Phone</th>
                       <th scope="col">Address</th>
+                      <th scope="col">Time/Date</th>
+          
                       <th scope="col">Status</th>
                     </tr>
                   </thead>
@@ -72,7 +80,12 @@ const AdminUserOrder = () => {
                           <td>{c.email}</td>
                           <td>{c.phone}</td>
                           <td> {c.address}</td>
+                          <td> { c.createdAt}</td>
                           <td>
+
+
+                          {/* <td> {c.createdAt.toString()}</td> */}
+
                             <button
                               key={c._id}
                               id={c._id}

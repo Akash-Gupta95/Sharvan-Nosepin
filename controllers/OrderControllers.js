@@ -58,6 +58,31 @@ export const getOrderDetailsController = async (req, res) => {
   }
 };
 
+
+
+
+// Get All order in User Dashboard
+export const getOrderDetailsUserController = async (req, res) => {
+  try {
+    const {email}= req.params;
+    const orders = await OrderRecModel.findOne({'email':email});
+    res.status(200).send({
+      success: true,
+      counTotal: orders.length,
+      message: " Orders find ",
+      orders,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Erorr in getting Orders",
+      error: error.message,
+    });
+  }
+};
+
+
 // Delete Single  order in Admin Dashboard
 
 export const DeleteSingleOrder = async (req, res) => {

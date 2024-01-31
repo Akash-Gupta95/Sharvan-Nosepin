@@ -21,6 +21,49 @@
   justify-content: center;
 }
 
+/* Carsoul */
+
+
+.carsoulDiv{
+  margin-top: 4.5rem;
+
+}
+
+.content{
+  margin-top: 8rem;
+  
+  margin-bottom: 5rem;
+  
+}
+
+.changecontent1::after{
+  content: '';
+  color: #ffa500;
+  font-size: 3rem;
+  text-shadow: 0px 1px 1px black;
+  animation: changetxt1 15s infinite linear;
+ 
+}
+@keyframes changetxt1{
+  0%{content:"Best - Quility" ;}
+  25%{content:"Tunch-Guarenty" ;}
+  50%{content:"New - Design" ;}
+  100%{content:"Fast -  Delivery" ;}
+
+}
+
+
+.Home .content p{
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px black;
+  margin-bottom: 30px;
+  margin-top: 5px;
+
+}
+
+
 .serviceHeader h1{
   line-height: 1;
   letter-spacing: 0.3px;
@@ -30,6 +73,54 @@
 
   font-size: 34px;
 }
+
+.TunchOrder{
+  margin-top: 8rem !important;
+}
+
+
+.Tunch-Container {
+  width: 100%;
+
+
+}
+.Tunch{
+
+
+  display: flex;
+text-align: center;
+align-items: center;
+justify-content: space-between;
+}
+
+.Tunch div{
+  background-color: #610000;
+  border-radius: 12px;
+  width: 6rem;
+  margin-top: 2rem;
+  padding-top: 5px;
+  box-shadow: 2px 2px 2px black;
+  z-index: 2;
+  
+  
+
+}
+.TunchOrder{
+
+  border-radius: 1.6rem;
+  background: linear-gradient(#EDF1F4
+  ,
+  #C3CBDC);
+  margin-top: 2rem;
+  box-shadow: 2px 4px 4px gray;
+}
+
+.Tunch div h1{
+  font-size: 1.3rem;
+  padding: 5px;
+
+}
+
 
 .Services span {
   color: red;
@@ -220,4 +311,14 @@ filters
 
 }
 
-@media(max-width:480px) {}
+@media(max-width:480px) {
+  .carousel{
+    margin-top: 6rem;
+  
+  }
+
+  .carousel-item img{
+    height: 32vh;
+  }
+
+}

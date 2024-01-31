@@ -1,33 +1,73 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import UserMenu from "../../components/Layout/UserMenu";
 import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
-import moment from "moment";
+
+import "./UserOrder.css";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
+  const [reducerValue, forceUpdate] = useReducer((x) => x + 1, 0);
+
   const getOrders = async () => {
+
     try {
+      let email= auth.user.email;
       const { data } = await axios.get(
-        "https://sharvannosepin.onrender.com/api/v1/auth/orders"
+        `http://localhost:8000/api/v1/order/get-orderDetails/${email}`
       );
       setOrders(data);
+
+      forceUpdate();
     } catch (error) {
       console.log(error);
     }
   };
 
+ 
+
   useEffect(() => {
     if (auth?.token) getOrders();
-  }, [auth?.token]);
+    console.log(orders)
+
+  }, [auth?.token, reducerValue]);
+  
+
+useEffect(()=>{
+  getOrders();
+},[reducerValue])
+
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-flui p-3 m-3 dashboard">
+
+
+
+<div className="Container mt-5">
+      <div className="row">
+        <div className="col-12">
+        <UserMenu />
+        </div>
+        <div className="col-12">
+        <div className="Order">   
+
+          {/* <h1>{Orders.orders.email}</h1> */}
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+{/* 
+      
+      <div className="container-fluid p-3 m-3 dashboard">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
+         
           </div>
           <div className="col-md-9">
             <h1 className="text-center">All Orders</h1>
@@ -81,7 +121,7 @@ const Orders = () => {
             })}
           </div>
         </div>
-      </div>
+      </div>  */}
     </Layout>
   );
 };

@@ -4,6 +4,7 @@ import {
   DeleteSingleOrder,
   createOrderController,
   getOrderDetailsController,
+  getOrderDetailsUserController,
 } from "../controllers/OrderControllers.js";
 import { requireSignIn } from "../middlewares/authMiddleware.js";
 
@@ -18,6 +19,12 @@ router.post(
 //get Order for Admin Dashboard
 
 router.get("/get-orderDetails", getOrderDetailsController);
+
+//get Order for User Dashboard
+
+router.get("/get-orderDetails/:email", getOrderDetailsUserController);
+
+
 
 // //delete Single Order
 router.delete("/delete-product/:id", DeleteSingleOrder);
