@@ -65,16 +65,17 @@ export const registerController = async (req, res) => {
 //POST LOGIN
 export const loginController = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { identifier, password } = req.body;
     //validation
-    if (!email || !password) {
-      return res.status(404).send({
-        success: false,
-        message: "Invalid email or password",
-      });
-    }
+    // if (!email || !password ||!phone) {
+    //   return res.status(404).send({
+    //     success: false,
+    //     message: "Invalid email or password",
+    //   });
+    // }
     //check user
-    const user = await userModel.findOne({ email });
+    
+    const user = await userModel.findOne({ $or: [{ email:identifier }, { phone:identifier }]});
     if (!user) {
       return res.status(404).send({
         success: false,

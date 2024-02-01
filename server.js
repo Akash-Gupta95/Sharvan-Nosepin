@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to ecommerce app</h1>");
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT =  8080;
 
 //run listen
 app.listen(PORT, () => {

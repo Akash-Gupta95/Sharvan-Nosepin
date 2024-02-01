@@ -7,22 +7,52 @@ import "./Login.css";
 import { useAuth } from "../../context/auth";
 const Login = () => {
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [auth, setAuth] = useAuth();
+
+  // Email or Phone Verification useState
+  const [inputValue, setInputValue] = useState('');
+  const [isValid, setIsValid] = useState(true);
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setInputValue(value);
+
+    // Check if the input is a valid email or phone number
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+
+    if(emailRegex.test(value)){
+      setEmail(value)
+     
+    }else if(phoneRegex.test(value)){
+      setPhone(value)
+      
+    }
+    
+  };
+
 
   const navigate = useNavigate();
   const location = useLocation();
 
   // form function
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     try {
       const res = await axios.post(
         "https://sharvannosepin.onrender.com/api/v1/auth/login",
         {
-          email,
+         
           password,
+
+          identifier: email || phone,
+         
+
         }
+
       );
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
@@ -53,13 +83,14 @@ const Login = () => {
 
             <div className="mb-3  inputBox">
               <input
-                type="email"
+                type="text" 
+                
                 autoFocus
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={inputValue}
+                onChange={handleInputChange}
                 className="form-control"
-                id="exampleInputEmail1"
-                placeholder="Email "
+                id="emailOrPhone"
+                placeholder="Email or Phone "    
                 required
               />
             </div>

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="row text-center text-md-left">
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-2 font-weight-bold text-warning">
-              SHARVEN NOSEPIN
+              SHARVAN NOSEPIN
             </h5>
             <p>
               "Big collection of shiny gold nose pins in different beautiful
@@ -35,7 +35,7 @@ const Footer = () => {
 
 
           <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 col-6">
-            <h5 className="text-uppercase mb-4 front-weight-bold text-warning">
+            <h5 className="text-uppercase mb-2 front-weight-bold text-warning">
               Contact
             </h5>
             <a href="#" className="text-white">
@@ -45,8 +45,8 @@ const Footer = () => {
           
 
             <a href="#" className="text-white">
-            +91- 8434381886
-            +91- 7903039192
+            <a>+91- 8434381886</a> 
+           <a> +91- 7903039192</a>
             </a>
             
             
@@ -89,9 +89,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// <p className="text-center mt-3">
-
-//   <Link to="/about">About</Link>|<Link to="/contact">Contact</Link>|
-//   <Link to="/policy">Privacy Policy</Link> &copy;
-// </p>
