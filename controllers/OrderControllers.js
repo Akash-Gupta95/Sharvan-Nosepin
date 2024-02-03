@@ -23,8 +23,7 @@ export const createOrderController = async (req, res) => {
         return res.status(500).send({ error: "email is Required" });
       case !phone:
         return res.status(500).send({ error: "phone is Required" });
-      case !shopName:
-        return res.status(500).send({ error: "shop Name is Required" });
+   
       case !address:
         return res.status(500).send({ error: "address is Required" });
     }

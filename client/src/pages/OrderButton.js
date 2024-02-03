@@ -26,7 +26,7 @@ const OrderButton = () => {
     };
 
   
-    
+    console.log(data)
     try{
     const order = await axios.post(
         "https://sharvannosepin.onrender.com/api/v1/order/create-order",
