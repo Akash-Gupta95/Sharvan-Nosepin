@@ -65,6 +65,7 @@ const AdminUserOrder = () => {
                       <th scope="col">Name</th>
                       <th scope="col">Email</th>
                       <th scope="col">Phone</th>
+                      <th scope="col">Shop Name</th>
                       <th scope="col">Address</th>
                       <th scope="col">Time/Date</th>
           
@@ -79,6 +80,7 @@ const AdminUserOrder = () => {
                           <td> {c.name}</td>
                           <td>{c.email}</td>
                           <td>{c.phone}</td>
+                          <td>{c.shopName}</td>
                           <td> {c.address}</td>
                           <td> { c.createdAt}</td>
                           <td>

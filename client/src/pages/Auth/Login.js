@@ -110,6 +110,14 @@ const Login = () => {
               Log In
             </button>
 
+            <button type="submit"  onClick={() => {
+                    navigate("/register");
+                }} className="btn btn-primary LoginBtn">
+            REGISTER
+            </button>
+
+          
+
             <div className="mb-3 ForgetButton">
               <button
                 type="button"

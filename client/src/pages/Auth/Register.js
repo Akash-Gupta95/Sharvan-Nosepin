@@ -11,6 +11,8 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [answer, setAnswer] = useState("");
+  const [shopName, setShopName] = useState("");
+  
   const navigate = useNavigate();
 
   // form function
@@ -24,6 +26,7 @@ const Register = () => {
           email,
           password,
           phone,
+          shopName,
           address,
           answer,
         }
@@ -38,6 +41,8 @@ const Register = () => {
       console.log(error);
       toast.error("Something went wrong");
     }
+
+
   };
 
   return (
@@ -98,6 +103,19 @@ const Register = () => {
                 required
               />
             </div>
+
+            <div className="mb-3 inputBox">
+              <input
+                type="text"
+                value={shopName}
+                onChange={(e) => setShopName(e.target.value)}
+                className="form-control"
+                id="exampleInputEmail1"
+                placeholder="Enter Your Shop Name"
+               
+              />
+            </div>
+
             <div className="mb-3 inputBox">
               <input
                 type="text"
