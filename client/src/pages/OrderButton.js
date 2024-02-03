@@ -25,8 +25,7 @@ const OrderButton = () => {
       address,
     };
 
-    console.log("sn",shopName)
-    console.log("au",auth)
+  
     
     try{
     const order = await axios.post(
