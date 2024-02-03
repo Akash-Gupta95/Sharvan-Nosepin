@@ -16,13 +16,18 @@ const OrderButton = () => {
   const handleOrder = async () => {
     
     setOrder("Booked")
-    const { name, email, phone, address } = auth.user;
+    const { name, email, phone, address,shopName } = auth.user;
     const data = {
       name,
       email,
       phone,
+      shopName,
       address,
     };
+
+    console.log("sn",shopName)
+    console.log("au",auth)
+    
     try{
     const order = await axios.post(
         "https://sharvannosepin.onrender.com/api/v1/order/create-order",

@@ -105,6 +105,7 @@ export const loginController = async (req, res) => {
         name: user.name,
         email: user.email,
         phone: user.phone,
+        shopName: user.shopName,
         address: user.address,
         role: user.role,
       },

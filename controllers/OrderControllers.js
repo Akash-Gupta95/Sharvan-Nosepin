@@ -2,11 +2,12 @@ import OrderRecModel from "../models/OrderRecModel.js";
 
 export const createOrderController = async (req, res) => {
   try {
-    const { name, email, phone, address, id } = req.body;
+    const { name, email, phone, address, id,  shopName } = req.body;
     const data = {
       name,
       email,
       phone,
+      shopName,
       address,
     };
 
@@ -22,6 +23,8 @@ export const createOrderController = async (req, res) => {
         return res.status(500).send({ error: "email is Required" });
       case !phone:
         return res.status(500).send({ error: "phone is Required" });
+      case !shopName:
+        return res.status(500).send({ error: "shop Name is Required" });
       case !address:
         return res.status(500).send({ error: "address is Required" });
     }

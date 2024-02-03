@@ -17,6 +17,7 @@ const AdminUserOrder = () => {
       if (data?.success) {
         setUserData(data?.orders);
       }
+      
     } catch (error) {
       console.log(error);
       toast.error("Something wwent wrong in getting Orders");
@@ -26,6 +27,7 @@ const AdminUserOrder = () => {
 
   useEffect(() => {
     AllOrder();
+    console.log(userData)
     // eslint-disable-next-line
   }, [reducerValue]);
 
@@ -81,10 +83,10 @@ const AdminUserOrder = () => {
                           <td>{c.email}</td>
                           <td>{c.phone}</td>
                           <td>{c.shopName}</td>
-                          <td> {c.address}</td>
-                          <td> { c.createdAt}</td>
+                          <td>{c.address}</td>
+                          <td>{ c.createdAt}</td>
                           <td>
-
+                          
                           {/* <td> {c.createdAt.toString()}</td> */}
 
                             <button
