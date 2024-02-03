@@ -133,16 +133,13 @@ const HomePage = () => {
   };
 
   // HandleOrder
-  const [Order , setOrder] =  useState("PLACE ORDER")
 
   const handleOrder = async () => {
-
-    const { name, email, phone, address, shopName } = auth.user;
+    const { name, email, phone, address } = auth.user;
     const data = {
       name,
       email,
       phone,
-      shopName,
       address,
     };
     try {
@@ -154,8 +151,6 @@ const HomePage = () => {
     } catch (error) {
       console.log(error);
     }
-    setOrder("Booked")
-
   };
 
   return (
@@ -229,11 +224,11 @@ const HomePage = () => {
                       className="btn btn-dark ms-1"
                       onClick={() => navigate("/login")}
                     >
-                      {Order}
+                      PLACE ORDER
                     </button>
                   ) : (
                     <button className="btn btn-dark ms-1" onClick={handleOrder}>
-                      {Order}
+                      PLACE ORDER
                     </button>
                   )}
                 </div>
